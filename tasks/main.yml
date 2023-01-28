@@ -1,2 +1,10 @@
 ---
-# tasks file for repository-setup
+- name: "Disable Enterprise Repository"
+  include_tasks:
+    file: "disable-enterprise-repository.yml"
+  when: "disable_enterprise_repository"
+
+- name: "Enable No-Subscription Repository"
+  include_tasks:
+    file: "enable-no-subscription-repository.yml"
+  when: "enable_no_subscription_repository"

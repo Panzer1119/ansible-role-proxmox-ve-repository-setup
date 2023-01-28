@@ -1,0 +1,6 @@
+--- #TODO Check if this works
+- name: "Ensure Enterprise Repository is absent"
+  apt_repository:
+    repo: "deb {{ enterprise_repository_url }}  {{ ansible_distribution_release }} {{ enterprise_repository_distribution }}"
+    filename: "pve-enterprise.list"
+    state: "absent"

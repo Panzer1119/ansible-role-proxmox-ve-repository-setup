@@ -1,0 +1,8 @@
+--- #TODO Check if this works
+- name: "Ensure No-Subscription Repository is present"
+  lineinfile:
+    path: "/etc/apt/sources.list"
+    line: "deb {{ no_subscription_repository_url }} {{ ansible_distribution_release }} {{ no_subscription_repository_distribution }}"
+    state: "present"
+    # Uncomment the line if it starts with a #
+    regexp: "^\s*#\s*deb {{ no_subscription_repository_url }} {{ ansible_distribution_release }} {{ no_subscription_repository_distribution }}"
