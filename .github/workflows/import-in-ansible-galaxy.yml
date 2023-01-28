@@ -21,4 +21,4 @@ jobs:
       - name: Trigger a new import on Galaxy
         run: >-
           ansible-galaxy role import --api-key ${{ secrets.GALAXY_API_KEY }}
-          ${{ github.repository_owner }}) ${{ github.repository }}
+          ${{ github.repository_owner }} ${{ github.repository }}
