@@ -1,0 +1,6 @@
+--- #TODO Check if this works
+- name: "Ensure Enterprise Repository file is absent" #TODO Can this also be done via the apt_repository plugin?
+  file:
+    path: "/etc/apt/sources.list.d/pve-enterprise.list"
+    state: "absent"
+    

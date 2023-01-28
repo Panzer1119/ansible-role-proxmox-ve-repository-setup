@@ -1,0 +1,3 @@
+---
+disable_enterprise_repository: true
+enable_no_subscription_repository: true

@@ -1,0 +1,7 @@
+--- #TODO Check if this works
+- name: "Ensure No-Subscription Repository is present"
+  apt_repository:
+    repo: "deb http://download.proxmox.com/debian/pve {{ ansible_distribution_release }} pve-no-subscription"
+    filename: "pve-no-subscription"
+    state: "present"
+    
