@@ -8,3 +8,8 @@
   include_tasks:
     file: "enable-no-subscription-repository.yml"
   when: "enable_no_subscription_repository"
+
+- name: "Enable Test Repository"
+  include_tasks:
+    file: "enable-test-repository.yml"
+  when: "enable_test_repository"

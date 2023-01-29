@@ -1,0 +1,8 @@
+---
+- name: "Ensure Test Repository is enabled"
+  lineinfile:
+    path: "/etc/apt/sources.list"
+    line: "deb {{ test_repository_url }} {{ ansible_distribution_release }} {{ test_repository_distribution }}"
+    state: "present"
+    # Uncomment the line if it starts with a #
+    regexp: '^\s*#\s*deb {{ test_repository_url }} {{ ansible_distribution_release }} {{ test_repository_distribution }}'
